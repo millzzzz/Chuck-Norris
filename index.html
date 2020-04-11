@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel='stylesheet' type='text/css' href='style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans+Condensed&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="parent">
+        <img src="src/logo.png" alt="Chuck Norris" />
+        <p><span id="input">along time ago Chuck Norris met an Asian kid also named Chuck Norris. Not pleased with there
+                being another Chuck Norris so he punched him so hard the name on the the Asian kid's birth certificate
+                changed to Bruce Lee.</span></p>
+        <button>Get a joke</button>
+    </div>
+</body>
+
+<script>
+    const textInput = document.getElementById('input');
+    const jokeButton = document.querySelector('button');
+    jokeButton.addEventListener('click', getJoke);
+
+    function getJoke() {
+        fetch('https://api.chucknorris.io/jokes/random')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data.value);
+                textInput.textContent = data.value;
+            });
+    }
+
+</script>
