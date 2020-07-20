@@ -1,5 +1,5 @@
 * {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     overflow-y: hidden;
     overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ p {
     margin-top: -100px;
 }
 
-button {
+#joke {
     background-color: #d68f53;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -35,11 +35,55 @@ button {
     color: black;
     font-size: 30px;
     border-radius: 10px;
+
 }
 
-button:hover {
+#joke:hover {
     -webkit-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     transform: rotate(-5deg);
+}
+
+.bottom {
+    display: flex;
+    text-align: center;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+.signature {
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
 }
